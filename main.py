@@ -11,25 +11,24 @@ x = random.choice(computer)
 
 if user == 'Rock':
     if x == 'Paper':
-        print(x, "\nYou lose!")
+        print(x, '\nYou lose!')
     elif x == 'Scissors':
-        print(x, "\nYou win!")
+        print(x, '\nYou win!')
     else:
         print(x, '\nStandoff')
 
 if user == 'Paper':
     if x == 'Rock':
-        print(x, "\nYou win!")
+        print(x, '\nYou win!')
     elif x == 'Scissors':
-        print(x, "\nYou lose!")
+        print(x, '\nYou lose!')
     else:
         print(x, '\nStandoff')
 
 if user == 'Scissors':
     if x == 'Paper':
-
-        print(x, "\nYou win!")
+        print(x, '\nYou win!')
     elif x == 'Rock':
-        print(x, "\nYou lose!")
+        print(x, '\nYou lose!')
     else:
         print(x, '\nStandoff')
