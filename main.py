@@ -4,28 +4,36 @@
 
 import random
 
-user = str(input("Rock, Scissors or Paper? \n"))
-computer = ['Rock', 'Scissors', 'Paper']
+def game():
+    computer = ['Rock', 'Scissors', 'Paper']
+    user = None
+    x = random.choice(computer)
 
-x = random.choice(computer)
+    while user == None:
+        user = str(input("Rock, Scissors or Paper? \n"))
+        if user not in computer:
+            print('repeat please \n', input())
 
-while user != 'Rock' or user != 'Paper' or user != 'Scissors':
-    user = str(input("Rock, Scissors or Paper? \n"))
-    if user == 'Rock' or user == 'Paper' or user == 'Scissors':
-        if user == computer:
-            print('Tie!\n')
-        if user == 'Rock':
-            if x == 'Paper':
-                print(x, '\nYou lose!\n')
-            elif x == 'Scissors':
-                print(x, '\nYou win!\n')
-        if user == 'Paper':
-            if x == 'Rock':
-                print(x, '\nYou win!\n')
-            elif x == 'Scissors':
-                print(x, '\nYou lose!\n')
-        if user == 'Scissors':
-            if x == 'Paper':
-                print(x, '\nYou win!\n')
-            elif x == 'Rock':
-                print(x, '\nYou lose!\n')
+
+    if user == computer:
+        print('Tie!\n')
+
+    if user == 'Rock':
+        if x == 'Paper':
+            print(x, '\nYou lose!\n')
+        elif x == 'Scissors':
+            print(x, '\nYou win!\n')
+
+    if user == 'Paper':
+        if x == 'Rock':
+            print(x, '\nYou win!\n')
+        elif x == 'Scissors':
+            print(x, '\nYou lose!\n')
+
+    if user == 'Scissors':
+        if x == 'Paper':
+            print(x, '\nYou win!\n')
+        elif x == 'Rock':
+            print(x, '\nYou lose!\n')
+
+print(game())
