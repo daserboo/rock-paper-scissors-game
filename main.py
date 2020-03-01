@@ -4,17 +4,32 @@
 
 import random
 
-user = str(input("Rock, Scissors or Paper? "))
+user = str(input("Rock, Scissors or Paper? \n"))
 computer = ['Rock', 'Scissors', 'Paper']
 
-def expressions():
-
+x = random.choice(computer)
 
 if user == 'Rock':
-    print(random.choice(computer))
+    if x == 'Paper':
+        print(x, "\nYou lose!")
+    elif x == 'Scissors':
+        print(x, "\nYou win!")
+    else:
+        print(x, '\nStandoff')
 
 if user == 'Paper':
-    print(random.choice(computer))
+    if x == 'Rock':
+        print(x, "\nYou win!")
+    elif x == 'Scissors':
+        print(x, "\nYou lose!")
+    else:
+        print(x, '\nStandoff')
 
 if user == 'Scissors':
-    print(random.choice(computer))
+    if x == 'Paper':
+
+        print(x, "\nYou win!")
+    elif x == 'Rock':
+        print(x, "\nYou lose!")
+    else:
+        print(x, '\nStandoff')
