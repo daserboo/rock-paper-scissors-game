@@ -6,17 +6,11 @@ import random
 
 def game():
     computer = ['Rock', 'Scissors', 'Paper']
-    user = None
+    user = str(input("Rock, Scissors or Paper? \n"))
     x = random.choice(computer)
 
-    while user == None:
-        user = str(input("Rock, Scissors or Paper? \n"))
-        if user not in computer:
-            print('repeat please \n', input())
-
-
-    if user == computer:
-        print('Tie!\n')
+    if user == x:
+        print(x, '\nTie!\n')
 
     if user == 'Rock':
         if x == 'Paper':
